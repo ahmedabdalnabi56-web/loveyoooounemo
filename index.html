@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#ffdde1;
+    background:linear-gradient(to top,#ff9a9e,#fad0c4);
+    font-family:Arial,sans-serif;
+    overflow:hidden;
+}
+
+.container{
+    text-align:center;
+}
+
+.heart{
+    font-size:120px;
+    cursor:pointer;
+    animation:beat 1s infinite;
+    transition:.4s;
+}
+
+@keyframes beat{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.15);}
+    100%{transform:scale(1);}
+}
+
+.message{
+    display:none;
+    margin-top:20px;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    animation:fade .8s;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+h1{
+color:#ff4d6d;
+}
+
+p{
+font-size:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="heart" onclick="showMessage()">❤️</div>
+
+<div class="message" id="msg">
+<h1>To My Love ❤️</h1>
+
+<p>toz feke 🥹❤️</p>
+
+<p>astne el goz2 el tani</p>
+
+</div>
+
+</div>
+
+<script>
+
+function showMessage(){
+
+document.querySelector(".heart").style.display="none";
+
+document.getElementById("msg").style.display="block";
+
+}
+
+</script>
+
+</body>
+</html>
